@@ -84,7 +84,7 @@
 
       const renderKey = () => {
         const key = getKey();
-        // refs.note.textContent = `That was note number ${key.pos}: ${key.name}`;
+        console.log(`That was note number ${key.pos}: ${key.name}`);
 
         // TODO (davidg): push this out into the Piano class
         const keyEls = document.querySelectorAll('[piano-key]');
