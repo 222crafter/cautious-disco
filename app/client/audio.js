@@ -86,7 +86,7 @@
         const key = getKey();
         console.log(`That was note number ${key.pos}: ${key.name}`);
         var element = document.getElementById("detected_notes");
-        element.insertAdjacentText('beforeend', ' ${key.name}');
+        element.insertAdjacentText('beforeend', `${key.name}`);
 
         // TODO (davidg): push this out into the Piano class
         const keyEls = document.querySelectorAll('[piano-key]');
