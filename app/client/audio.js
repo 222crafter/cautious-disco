@@ -164,7 +164,7 @@
 
       setInterval(() => {
         loudEnough && renderKey();
-      }, 750);
+      }, 500);
 
       window.addEventListener('keydown', e => {
         if (e.keyCode === 32) { // space
