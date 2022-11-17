@@ -18,7 +18,7 @@
       const {refs, KEYS} = SP_APP;
       let audioReady = false;
       let loudEnough = false;
-      const MIN_VOLUME = 6.5;
+      const MIN_VOLUME = 8.5;
 
       const ref = document.location.pathname.replace(/^\//, '');
 
@@ -86,7 +86,7 @@
         const key = getKey();
         console.log(`That was note number ${key.pos}: ${key.name}`);
         var element = document.getElementById("detected_notes");
-        element.insertAdjacentText('beforeend', `${key.name}`);
+        element.insertAdjacentText('beforeend', `${key.pos}`);
 
         // TODO (davidg): push this out into the Piano class
         const keyEls = document.querySelectorAll('[piano-key]');
@@ -164,7 +164,7 @@
 
       setInterval(() => {
         loudEnough && renderKey();
-      }, 250);
+      }, 1000);
 
       window.addEventListener('keydown', e => {
         if (e.keyCode === 32) { // space
