@@ -18,7 +18,7 @@
       const {refs, KEYS} = SP_APP;
       let audioReady = false;
       let loudEnough = false;
-      const MIN_VOLUME = 2;
+      const MIN_VOLUME = 10000;
 
       const ref = document.location.pathname.replace(/^\//, '');
 
